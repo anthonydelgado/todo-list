@@ -4,7 +4,7 @@ $(document).ready(function() {
     $(document).on("click","#add",function() {
 
         var newTodo = $('#newtask').val();
-        var listItem = $('<li class="collection-item remove">');
+        var listItem = $('<li class="collection-item remove dismissable">');
         listItem.text(newTodo);
         $('#tasks').append(listItem);
         $("#newtask").val('');
