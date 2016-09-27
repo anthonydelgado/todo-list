@@ -1,7 +1,21 @@
-$('#add').on('click', function () {
-    var newTodo = $('#newtask').val();
-    var listItem = $('<li class="collection-item">');
-    listItem.text(newTodo);
-    $('#tasks').append(listItem);
-    $("#newtask").val('');
+$(document).ready(function() {
+
+
+    $(document).on("click","#add",function() {
+
+        var newTodo = $('#newtask').val();
+        var listItem = $('<li class="collection-item remove">');
+        listItem.text(newTodo);
+        $('#tasks').append(listItem);
+        $("#newtask").val('');
+    });
+
+
+
+    $(document).on("click",".remove",function() {
+
+        $(this).fadeOut();
+    });
+
 });
+
